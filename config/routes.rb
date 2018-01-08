@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   root "creatures#index" # base route localhost:3000
   get "/creatures", to: "creatures#index"
-
+  get "/creatures/new" => "creatures#new", as: 'new_creature'
+  post "/creatures" => "creatures#create"
 
 end
