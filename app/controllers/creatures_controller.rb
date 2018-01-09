@@ -14,6 +14,10 @@ class CreaturesController < ApplicationController
 		redirect_to('/creatures')
 	end
 
+	def show
+		@creature = Creature.find(params[:id])
+	end	
+
 	private
 	def creature_params
 		params.require(:creature).permit(:name, :description)

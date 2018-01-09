@@ -3,4 +3,8 @@
 <% @creatures.each do |creature| %>
 	<p>Name: <%= creature.name %></p>
 	<p>Description: <%= creature.description %></p>
+	<br>
+	<a href="/creatures/<%=creature.id %>">Show page</a> 
+	
 <% end %>
+
